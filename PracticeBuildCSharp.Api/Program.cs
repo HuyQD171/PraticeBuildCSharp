@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PracticeBuildCSharp.Repository;
+using UserService = PraticeBuildCSharp.Service.User;
+using SellerService = PraticeBuildCSharp.Service.Seller;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<UserService.IService, UserService.Service>();
+builder.Services.AddScoped<SellerService.IService, SellerService.Service>();
 
 var app = builder.Build();
 
