@@ -1,7 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using PracticeBuildCSharp.Repository;
+
+using IdentityService = PraticeBuildCSharp.Service.Identity;
+using JwtService = PraticeBuildCSharp.Service.JwtService;
 using UserService = PraticeBuildCSharp.Service.User;
 using SellerService = PraticeBuildCSharp.Service.Seller;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +19,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<JwtService.IService, JwtService.Service>();
+builder.Services.AddScoped<IdentityService.IService, IdentityService.Service>();
 builder.Services.AddScoped<UserService.IService, UserService.Service>();
 builder.Services.AddScoped<SellerService.IService, SellerService.Service>();
 
@@ -27,6 +33,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

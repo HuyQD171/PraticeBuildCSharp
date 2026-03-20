@@ -6,9 +6,7 @@ namespace PracticeBuildCSharp.Repository;
 
 public class AppDbContext : DbContext
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options)
-        : base(options)
-    {}
+
 
     public static Guid CateGoryParentId1 = Guid.NewGuid();
     public static Guid CateGoryParentId2 = Guid.NewGuid();
