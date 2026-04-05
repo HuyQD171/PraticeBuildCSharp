@@ -1,4 +1,4 @@
-namespace PraticeBuildCSharp.Service.Seller;
+namespace PracticeBuildCSharp.Service.Seller;
 
 public class Response
 {

@@ -2,9 +2,9 @@ using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using PracticeBuildCSharp.Repository;
-using PraticeBuildCSharp.Service.JwtService;
+using PracticeBuildCSharp.Service.JwtService;
 
-namespace PraticeBuildCSharp.Service.Identity;
+namespace PracticeBuildCSharp.Service.Identity;
 
 public class Service : IService
 {

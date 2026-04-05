@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PracticeBuildCSharp.Repository;
 
-namespace PraticeBuildCSharp.Service.Seller;
+namespace PracticeBuildCSharp.Service.Seller;
 
 public class Service: IService
 {

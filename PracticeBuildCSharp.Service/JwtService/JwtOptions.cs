@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace PraticeBuildCSharp.Service.JwtService;
+namespace PracticeBuildCSharp.Service.JwtService;
 
 public class JwtOptions
 {

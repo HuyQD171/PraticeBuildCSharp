@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-
-using PraticeBuildCSharp.Service.Identity;
+using PracticeBuildCSharp.Service.Identity;
 
 namespace PracticeBuildCSharp.Api.Controllers;
 

@@ -11,6 +11,10 @@ public class AppDbContext : DbContext
     public static Guid CateGoryParentId1 = Guid.NewGuid();
     public static Guid CateGoryParentId2 = Guid.NewGuid();
 
+    public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options)
+    {
+    }
     
     public DbSet<User> Users { get; set; }
     public DbSet<Storage> Storages { get; set; }
@@ -23,6 +27,7 @@ public class AppDbContext : DbContext
     public DbSet<Inventory> Inventories { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Cart> Carts { get; set; }
+    public DbSet<CartDetail> CartDetails { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -135,6 +140,7 @@ public class AppDbContext : DbContext
                     NameProduct = $"ProductName{i}",
                     PriceProduct = 9900M,
                     DescriptionProduct = $"DescriptionProduct{i}",
+                    SellerId = listSellersId[0],
                 };
                 listProductsId.Add(newProduct.Id);
                 products.Add(newProduct);
@@ -376,17 +382,7 @@ public class AppDbContext : DbContext
             });
             modelBuilder.Entity<Cart>(builder =>
             {
-                List<Cart> carts = new List<Cart>();
-                for (int i = 0; i < listUsersId.Count - 1; i++)
-                {
-                    var newCart = new Cart()
-                    {
-                        Id = Guid.NewGuid(),
-                        UserId = listUsersId[i],
-                    };
-                    carts.Add(newCart);
-                }
-                builder.HasData(carts);
+
             });
 
     }

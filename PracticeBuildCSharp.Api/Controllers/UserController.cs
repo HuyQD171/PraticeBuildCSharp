@@ -1,9 +1,6 @@
-
-
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using PracticeBuildCSharp.Repository;
-using PraticeBuildCSharp.Service.User;
+using PracticeBuildCSharp.Service.User;
 
 namespace PracticeBuildCSharp.Api.Controllers;
 

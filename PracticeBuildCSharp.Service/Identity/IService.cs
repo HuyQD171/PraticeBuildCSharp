@@ -1,4 +1,4 @@
-namespace PraticeBuildCSharp.Service.Identity;
+namespace PracticeBuildCSharp.Service.Identity;
 
 public interface IService
 {

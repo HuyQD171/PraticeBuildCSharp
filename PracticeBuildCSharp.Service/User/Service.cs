@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PracticeBuildCSharp.Repository;
 
-namespace PraticeBuildCSharp.Service.User;
+namespace PracticeBuildCSharp.Service.User;
 
 public class Service: IService
 {

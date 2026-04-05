@@ -1,4 +1,4 @@
-namespace PraticeBuildCSharp.Service.User;
+namespace PracticeBuildCSharp.Service.User;
 
 public class Response
 {

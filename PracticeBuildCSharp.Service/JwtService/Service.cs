@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace PraticeBuildCSharp.Service.JwtService;
+namespace PracticeBuildCSharp.Service.JwtService;
 
 public class Service: IService
 {

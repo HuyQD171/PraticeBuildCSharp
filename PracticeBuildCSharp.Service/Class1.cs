@@ -1,4 +1,4 @@
-﻿namespace PraticeBuildCSharp.Service;
+﻿namespace PracticeBuildCSharp.Service;
 
 public class Class1
 {

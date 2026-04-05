@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using PracticeBuildCSharp.Repository;
-using PraticeBuildCSharp.Service.Seller;
+using PracticeBuildCSharp.Service.Seller;
 
 
 namespace PracticeBuildCSharp.Api.Controllers;
